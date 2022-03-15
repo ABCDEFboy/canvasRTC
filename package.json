@@ -1,0 +1,39 @@
+{
+	"name": "canvasrtc",
+	"version": "1.0.0",
+	"description": "学习canvas回放",
+	"main": "build/canvasRTC.js",
+	"module": "build/canvasRTC.module.js",
+	"types": "build/canvasRTC.d.ts",
+	"author": "十点前回家",
+	"license": "MIT",
+	"files": [
+		"build",
+		"LICENSE",
+		"package.json",
+		"README.md",
+		"src"
+	],
+	"scripts": {
+		"build": "rollup -c scripts/rollup.config.js"
+	},
+	"keywords": [
+		"canvasRTC",
+	],
+	"dependencies": {},
+	"devDependencies": {
+		"@types/dom-mediacapture-record": "^1.0.7",
+		"@typescript-eslint/eslint-plugin": "^4.17.0",
+		"@typescript-eslint/parser": "^4.17.0",
+		"eslint": "^7.21.0",
+		"eslint-config-valeera": "^0.1.1",
+		"eslint-plugin-html": "^6.1.2",
+		"eslint-plugin-prettier": "^3.3.1",
+		"eslint-plugin-tsdoc": "^0.2.3",
+		"prettier": "^2.2.1",
+		"rollup": "^2.68.0",
+		"rollup-plugin-json": "^4.0.0",
+		"rollup-plugin-typescript2": "^0.31.2",
+		"typescript": "^4.5.5"
+	}
+}

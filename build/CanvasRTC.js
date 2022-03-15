@@ -1,0 +1,32 @@
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.CanvasRTC = factory());
+})(this, (function () { 'use strict';
+
+	class CanvasRTC {
+	    fps = 60; // 捕获速率，先默认是60fps
+	    // 录制的canvas元素
+	    canvas;
+	    mediaSource;
+	    mediaStream;
+	    constructor(canvas) {
+	        this.canvas = canvas;
+	    }
+	    // 浏览器是否支持
+	    isSupportMediaSource() {
+	        return !!MediaSource && "MediaSource" in window;
+	    }
+	    // 初始化实时视频捕获的画布
+	    initMediaSource() {
+	        this.mediaSource = new MediaSource();
+	        this.mediaStream = this.canvas.captureStream(this.fps);
+	        // 学一手链式调用
+	        return this;
+	    }
+	}
+
+	return CanvasRTC;
+
+}));
+//# sourceMappingURL=CanvasRTC.js.map
